@@ -21,7 +21,7 @@ public class CarLogic : MonoBehaviour
     [Header("UI Elements")]
     public TMP_Text currentSpeedText;
     
-    void Start()
+    private void Start()
     {
         if (target == null)
         {
@@ -29,7 +29,7 @@ public class CarLogic : MonoBehaviour
         }
     }
     
-    void Update()
+     private void Update()
     {
         if(target == null)
             return;
@@ -46,7 +46,7 @@ public class CarLogic : MonoBehaviour
         UpdateDebugInfo();
     }
     
-    void ApplyEngineState(EngineState state)
+    private void ApplyEngineState(EngineState state)
     {
         switch (state)
         {
@@ -64,13 +64,13 @@ public class CarLogic : MonoBehaviour
         }
     }
     
-    void MoveCar()
+    private void MoveCar()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         transform.position += direction * currentSpeed * Time.deltaTime;
     }
     
-    void UpdateDebugInfo()
+    private void UpdateDebugInfo()
     {
         currentSpeedText.text = $"Distance: {distanceToTarget:F2}m | Speed: {currentSpeed:F2}m/s | State: {currentEngineState}";
     }

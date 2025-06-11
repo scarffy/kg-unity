@@ -20,7 +20,7 @@ public class TankInterceptionSystem : MonoBehaviour
     private Vector3 lastInterceptPosition;
     private bool canIntercept = false;
 
-    void Update()
+    private void Update()
     {
         if (target != null)
         {
@@ -66,7 +66,7 @@ public class TankInterceptionSystem : MonoBehaviour
     /// <summary>
     /// The main interception calculation method
     /// </summary>
-    bool CalculateInterceptPosition(Vector3 selfPosition, Vector3 selfVelocity, 
+    private bool CalculateInterceptPosition(Vector3 selfPosition, Vector3 selfVelocity, 
                                    Vector3 targetPosition, Vector3 targetVelocity, 
                                    float bulletSpeed, out Vector3 interceptPosition)
     {
@@ -133,7 +133,7 @@ public class TankInterceptionSystem : MonoBehaviour
         return true;
     }
 
-    void AimTurretAtPosition(Vector3 targetPos)
+    private void AimTurretAtPosition(Vector3 targetPos)
     {
         if (tankTurret == null) return;
         
@@ -147,7 +147,7 @@ public class TankInterceptionSystem : MonoBehaviour
         tankTurret.rotation = Quaternion.Euler(0, newAngle, 0);
     }
 
-    void Fire()
+    private void Fire()
     {
         if (bulletPrefab == null || firePoint == null) return;
         
@@ -165,7 +165,7 @@ public class TankInterceptionSystem : MonoBehaviour
         Debug.Log($"Fired at intercept position: {lastInterceptPosition}");
     }
 
-    void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         if (!showDebugLines) return;
         
