@@ -320,7 +320,7 @@ VisualEffect:
   m_PropertySheet:
     m_Float:
       m_Array:
-      - m_Value: 0
+      - m_Value: 0.1
         m_Name: Y Velo
         m_Overridden: 1
       - m_Value: 0.05
@@ -329,10 +329,10 @@ VisualEffect:
       - m_Value: 1
         m_Name: Ball Size
         m_Overridden: 1
-      - m_Value: 0.5
+      - m_Value: 0.52
         m_Name: Noise Power
         m_Overridden: 1
-      - m_Value: 1
+      - m_Value: 1.08
         m_Name: Noise Size
         m_Overridden: 1
     m_Vector2f:
@@ -340,15 +340,15 @@ VisualEffect:
       - m_Value: {x: 5, y: 5}
         m_Name: Flipbook Size
         m_Overridden: 1
-      - m_Value: {x: 0, y: 0}
+      - m_Value: {x: 0.1, y: 0.1}
         m_Name: Random X/Z Velo
         m_Overridden: 1
-      - m_Value: {x: 0.5, y: 2}
+      - m_Value: {x: 0.5, y: 1}
         m_Name: Lifetime Min / Max
         m_Overridden: 1
     m_Vector3f:
       m_Array:
-      - m_Value: {x: -0.326, y: 1.9288276, z: -0.804}
+      - m_Value: {x: 0, y: 0, z: 0}
         m_Name: Ball Pos
         m_Overridden: 1
     m_Vector4f:
@@ -357,9 +357,9 @@ VisualEffect:
       m_Array: []
     m_Int:
       m_Array:
-      - m_Value: 5
+      - m_Value: 50000
         m_Name: SpawnRate
-        m_Overridden: 0
+        m_Overridden: 1
     m_Matrix4x4f:
       m_Array: []
     m_AnimationCurve:
@@ -388,11 +388,11 @@ Transform:
   m_GameObject: {fileID: 743490882}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.326, y: 1.9288276, z: -0.804}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1138282199}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &743490886
 MonoBehaviour:
@@ -406,10 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dac900a669525e4d9113e4f1af26b3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyBall: {fileID: 743490885}
-  material: {fileID: 2100000, guid: e02ea49ee89aa41419e678ee5f3a2bcd, type: 2}
-  noisePower: 0.5
-  noiseSize: 1
+  emptyBall: {fileID: 2031899332}
+  material: {fileID: 2100000, guid: 64bd7c0cee1988b47bec8038711883de, type: 2}
+  noisePower: 0.52
+  noiseSize: 1.08
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 64bd7c0cee1988b47bec8038711883de, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,7 +649,39 @@ Transform:
   m_GameObject: {fileID: 1138282195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.12739192, y: 2.3324165, z: -0.47727513}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 743490885}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2031899331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2031899332}
+  m_Layer: 0
+  m_Name: Effect Ball
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2031899332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031899331}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -661,5 +693,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 961739753}
   - {fileID: 203844589}
-  - {fileID: 743490885}
   - {fileID: 1138282199}
+  - {fileID: 2031899332}
